@@ -1,0 +1,24 @@
+{
+  "name": "nestjs-app-integrated",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nestjs-app-integrated/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "nestjs-app-integrated:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "nestjs-app-integrated:build:development"
+        },
+        "production": {
+          "buildTarget": "nestjs-app-integrated:build:production"
+        }
+      }
+    }
+  }
+}
